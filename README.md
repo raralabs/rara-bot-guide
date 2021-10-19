@@ -4,11 +4,15 @@ We can directly message **Rara bot** in our workspace using following commands.
 
 ### 1.1 Commands
 
+* `/help`:- Give short details and link to assist with using commands.
+
 * `/out`:- Command to work with recording absent data. Commands available:
     * `/out` - > Give modal to register absent details
     * `/out -d n` where n is *number of day* ->  Record details *n* day from today, reason will be *null*
     * `/out -d n "I am travelling"`-> Record details *n* day from today, reason for *leave*
     * `/out -undo` -> Leave will be removed but with limit (default: 30 minutes)
+    
+  Eg:- `/out -d 2 "Fever and common cold"` -> 2 days leave starting from today
     
 * `/out-today`:- Gets all name of member who are absent today.
 
@@ -19,6 +23,8 @@ We can directly message **Rara bot** in our workspace using following commands.
     * `/out-month -m n false`-> All members absent by specific month, _false_ represent include weekends or not
     * `/out-month -me` -> Total leaves by current user in current month
     Note:- `-me` takes same values as by `-m`.
+
+   Eg:- `/out-month -m [4, 8] false` -> Members leave from month 4 till 8 and does not count weekends
     
 * `/out-year`:- Gets all member who are absent by year.
     * `/out-year` - > All members absent in current year
@@ -27,3 +33,5 @@ We can directly message **Rara bot** in our workspace using following commands.
     * `/out-year -y n false`-> All members absent by specific year, _false_ represent include weekends or not
     * `/out-year -me` -> Total leaves by current user in current year
     Note:- `-me` takes same values as by `-y`.
+
+   Eg:- `/out-year -y [2019, 2021]` -> Members leave from 2019 till 2021 includes weekends 
