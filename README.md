@@ -11,8 +11,8 @@ We can directly message **Rara bot** in our workspace using following commands.
     * `/out -d n` where n is *number of day* ->  Record details *n* day from today, reason will be *null*
     * `/out -d n "I am travelling"`-> Record details *n* day from today, reason for *leave*
     * `/out -undo` -> Leave will be removed but with limit (default: 30 minutes)
-    
-  Eg:- `/out -d 2 "Fever and common cold"` -> 2 days leave starting from today
+        
+   Eg:- `/out -d 2 "Fever and common cold"` -> 2 days leave starting from today
     
 * `/out-today`:- Gets all name of member who are absent today.
 
@@ -35,3 +35,8 @@ We can directly message **Rara bot** in our workspace using following commands.
     Note:- `-me` takes same values as by `-y`.
 
    Eg:- `/out-year -y [2019, 2021]` -> Members leave from 2019 till 2021 includes weekends 
+   
+##### 1.1.1 Commands for admin/manager
+
+* `/out -del "sample@email.com"` - > Cancel leave for user with given _email_ . 
+Note:- Command will work only if leave start day *is greater than or equal to* current date. In other word, leaves that are *passed will not be touched* by the command.
