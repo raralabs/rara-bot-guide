@@ -36,7 +36,7 @@ We can directly message **Rara bot** in our workspace using following commands.
 
    Eg:- `/out-year -y [2019, 2021]` -> Members leave from 2019 till 2021 includes weekends 
    
-##### 1.1.1 Commands for admin/manager
+#### 1.1.1 Commands for admin/manager
 
 * `/out -del "sample@email.com"` - > Cancel leave for user with given _email_ . 
 Note:- Command will work only if leave start day *is greater than or equal to* current date. In other word, leaves that are *passed will not be touched* by the command.
