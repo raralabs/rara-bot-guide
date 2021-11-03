@@ -57,3 +57,7 @@ We can directly message **Rara bot** in our workspace using following commands.
     * `/holiday -del [n*]` where n* is *list of dates*  ->  Delete records for holiday with list of dates. 
     
     Eg:- `/holiday -h ['2021-11-05', '2021-11-06'] 'Tihar vacation'` where *description* is optional. Note that date should follow exact format.
+* `/message`
+    * `/message -del ['ts1', 'ts2', **] 'channel_id'` -> Delete messages where *ts* is message timestamp that can be found from copying link. channel_id is optional. If channel id is not given then channel_id will be the channel id from where the command is run.
+
+    Eg:- `/message -del ['1635913924024900', "1635913925025000",  “1635913925025100”]`
