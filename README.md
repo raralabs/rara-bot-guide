@@ -42,6 +42,15 @@ We can directly message **Rara bot** in our workspace using following commands.
     * `/holiday-month -m [m, n]` where m and n is *number of month* -> Holidays between *m* and *n*
 
     Eg:- `/holiday-month -m [4, 8]` -> Holidays from month *4* till *8* in current year.
+
+* `/late`:- Command to work with recording late data. Commands available:
+    * `/late -l late_remarks`-> Record late details, *late_remarks* is late remarks text within quotes.
+        
+   Eg:- `/late -l "I will be 30 min late"` -> Late with remarks
+    
+* `/late-today`:- Gets all name of member who are late today.
+
+* `/lunch-today`:- Gets number of members having or not having lunch the current date.
    
 #### 1.1.1 Commands for admin/manager
 
@@ -50,6 +59,12 @@ We can directly message **Rara bot** in our workspace using following commands.
 
     * `/out -del "sample@email.com"` - > Cancel leave for user with given _email_ . 
     Note:- Command will work only if leave start day *is greater than or equal to* current date. In other word, leaves that are *passed will not be touched* by the command.
+
+* `/late`
+    * `/late -add "sample@email.com" "30 mins late"` -> Add late for the user. Late will be taken for the current day. Description is _required_.
+
+    * `/late -del "sample@email.com"` - > Cancel late for user with given _email_ . 
+    Note:- Command will work only if late created date *is greater than or equal to* current date.
     
 * `/holiday`
     * `/holiday` -> Gives modal to register using form. But, cannot use to insert multiple holiday at once.
@@ -57,6 +72,7 @@ We can directly message **Rara bot** in our workspace using following commands.
     * `/holiday -del [n*]` where n* is *list of dates*  ->  Delete records for holiday with list of dates. 
     
     Eg:- `/holiday -h ['2021-11-05', '2021-11-06'] 'Tihar vacation'` where *description* is optional. Note that date should follow exact format.
+
 * `/message`
     * `/message -del ['ts1', 'ts2', **] 'channel_id'` -> Delete messages where *ts* is message timestamp that can be found from copying link. channel_id is optional. If channel id is not given then channel_id will be the channel id from where the command is run.
 
